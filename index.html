@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Throne of Jackpots 👑</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700;900&family=Nunito+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+<script src="https://cdn.tailwindcss.com"></script>
+<style>
+:root{--bg:#0d0618;--bg2:#1a0b30;--card:rgba(58,24,102,.42);--gold:#e3b54f;--gold2:#f6dc95;--lav:#c9b3ff;--text:#eee6fb;--muted:#b9a8d6;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+html{scroll-behavior:smooth;scroll-padding-top:calc(76px + env(safe-area-inset-top,0px))}
+body{margin:0;background:var(--bg);color:var(--text);font-family:'Nunito Sans',system-ui,sans-serif;overflow-x:hidden}
+h1,h2,h3,.brand{font-family:'Cinzel',Georgia,serif}
+.gold-text{background:linear-gradient(180deg,var(--gold2),var(--gold));-webkit-background-clip:text;background-clip:text;color:transparent}
+.cave{background:
+ radial-gradient(60% 50% at 50% 0%,rgba(150,80,230,.35),transparent 70%),
+ radial-gradient(40% 30% at 10% 90%,rgba(120,60,200,.3),transparent 70%),
+ radial-gradient(40% 30% at 90% 80%,rgba(120,60,200,.3),transparent 70%),
+ linear-gradient(180deg,#160a2b,#0d0618)}
+.frame{border:1px solid rgba(227,181,79,.55);border-radius:1.1rem;background:var(--card);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);box-shadow:0 0 28px rgba(140,80,230,.22),inset 0 0 0 4px rgba(13,6,24,.35),inset 0 0 0 5px rgba(227,181,79,.18)}
+.btn{display:inline-block;font-family:'Cinzel',serif;font-weight:700;letter-spacing:.06em;color:#2a1500;background:linear-gradient(180deg,var(--gold2),var(--gold));padding:.85rem 1.8rem;border-radius:999px;box-shadow:0 0 22px rgba(227,181,79,.35);transition:transform .2s,box-shadow .2s;text-decoration:none}
+.btn:hover{transform:translateY(-2px);box-shadow:0 0 34px rgba(227,181,79,.55)}
+.btn:focus-visible,a:focus-visible{outline:2px solid var(--gold2);outline-offset:3px}
+.game{transition:transform .2s,box-shadow .2s}
+.game:hover{transform:translateY(-4px);box-shadow:0 0 34px rgba(160,100,255,.4)}
+.badge{border:1px solid rgba(227,181,79,.6);background:rgba(20,8,40,.6);border-radius:999px;padding:.55rem 1.1rem;font-weight:700;font-size:.9rem}
+.shroom{position:absolute;bottom:0;width:70px;height:70px;border-radius:50% 50% 8px 8px/90% 90% 8px 8px;background:radial-gradient(circle at 50% 30%,#b58cff,#5b2bb0);filter:drop-shadow(0 0 16px #a070ff);opacity:.55}
+.timer{font-family:'Cinzel',serif;font-size:clamp(3rem,10vw,5.5rem);font-weight:900;text-shadow:0 0 30px rgba(227,181,79,.5)}
+#fx{position:fixed;inset:0;width:100%;height:100%;pointer-events:none;z-index:0}
+main,header,footer{position:relative;z-index:1}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}.btn,.game{transition:none}}
+</style>
+</head>
+<body class="cave">
+<canvas id="fx" aria-hidden="true"></canvas>
+
+<header class="fixed top-0 inset-x-0 z-50" style="padding-top:env(safe-area-inset-top,0px);background:rgba(18,8,36,.72);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);border-bottom:1px solid rgba(227,181,79,.5)">
+  <div class="max-w-6xl mx-auto px-4 h-[68px] flex items-center justify-between gap-4">
+    <a href="#home" class="brand gold-text font-black text-base sm:text-xl tracking-wider no-underline whitespace-nowrap">THRONE OF JACKPOTS 👑</a>
+    <nav class="hidden md:flex gap-7 text-sm font-semibold" style="color:var(--lav)">
+      <a href="#home" class="hover:text-white">Home</a><a href="#games" class="hover:text-white">Games</a><a href="#why" class="hover:text-white">Why Choose Us</a><a href="#contact" class="hover:text-white">Contact</a>
+    </nav>
+    <a class="btn !py-2 !px-4 text-sm" href="https://www.facebook.com/ThroneofJackpots" target="_blank" rel="noopener">PLAY NOW</a>
+  </div>
+</header>
+
+<main>
+<section id="home" class="relative overflow-hidden pt-36 pb-28 px-4 text-center">
+  <div class="shroom" style="left:6%;width:90px;height:90px"></div>
+  <div class="shroom" style="left:14%;width:50px;height:50px"></div>
+  <div class="shroom" style="right:8%;width:100px;height:100px"></div>
+  <div class="shroom" style="right:18%;width:56px;height:56px"></div>
+  <div class="max-w-3xl mx-auto relative">
+    <h1 class="gold-text font-black leading-tight text-4xl sm:text-6xl">CLAIM YOUR PLACE AT THE THRONE 👑</h1>
+    <p class="mt-6 text-lg sm:text-xl" style="color:var(--muted)">Premium gaming access, fast cashouts, and active support whenever you need it.</p>
+    <div class="mt-8 flex flex-wrap justify-center gap-3">
+      <span class="badge">⚡ CASHOUT PAID WITHIN 15 MIN</span>
+      <span class="badge">💬 24 HOUR ACTIVE AGENTS</span>
+    </div>
+    <a class="btn mt-9" href="https://www.facebook.com/ThroneofJackpots" target="_blank" rel="noopener">CONTACT US NOW</a>
+    <p class="mt-5 text-sm" style="color:var(--lav)">Fast Support • Easy Access • Active Agents</p>
+  </div>
+</section>
+
+<section id="why" class="px-4 py-20">
+  <div class="max-w-6xl mx-auto">
+    <h2 class="gold-text text-center font-bold text-2xl sm:text-4xl">WHY PLAY WITH THRONE OF JACKPOTS?</h2>
+    <div class="mt-12 grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
+      <div class="frame p-6 text-center"><div class="text-4xl">⚡</div><h3 class="mt-3 gold-text font-bold text-lg">FAST CASHOUT</h3><p class="mt-2 text-sm" style="color:var(--muted)">Cashout requests are processed within 15 minutes for eligible requests.</p></div>
+      <div class="frame p-6 text-center"><div class="text-4xl">👑</div><h3 class="mt-3 gold-text font-bold text-lg">24 HOUR ACTIVE AGENTS</h3><p class="mt-2 text-sm" style="color:var(--muted)">Our agents are available around the clock to assist you.</p></div>
+      <div class="frame p-6 text-center"><div class="text-4xl">🎮</div><h3 class="mt-3 gold-text font-bold text-lg">15+ GAME OPTIONS</h3><p class="mt-2 text-sm" style="color:var(--muted)">Access a wide selection of popular gaming platforms.</p></div>
+      <div class="frame p-6 text-center"><div class="text-4xl">💬</div><h3 class="mt-3 gold-text font-bold text-lg">ACTIVE SUPPORT</h3><p class="mt-2 text-sm" style="color:var(--muted)">Message our team whenever you need assistance.</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="games" class="px-4 py-20">
+  <div class="max-w-6xl mx-auto text-center">
+    <h2 class="gold-text font-bold text-3xl sm:text-4xl">ENTER THE THRONE</h2>
+    <p class="mt-3" style="color:var(--muted)">Choose from our available gaming platforms.</p>
+    <div id="grid" class="mt-12 grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-4"></div>
+  </div>
+</section>
+
+<section class="px-4 py-20">
+  <div class="max-w-3xl mx-auto frame text-center px-6 py-14">
+    <h2 class="gold-text font-bold text-2xl sm:text-3xl">FAST CASHOUT. LESS WAITING. 👑</h2>
+    <div class="timer gold-text mt-8">PAID WITHIN 15 MIN</div>
+    <p class="mt-3" style="color:var(--muted)">Eligible cashout requests are processed within 15 minutes.</p>
+    <div class="mt-8 flex items-center justify-center gap-5">
+      <div class="timer !text-4xl sm:!text-5xl" style="color:var(--gold2)">15:00</div>
+      <div class="w-14 h-14 rounded-full flex items-center justify-center text-2xl font-black" style="background:linear-gradient(180deg,var(--gold2),var(--gold));color:#2a1500;box-shadow:0 0 24px rgba(227,181,79,.5)" aria-hidden="true">✓</div>
+      <div class="font-bold tracking-widest" style="color:var(--lav)">PROCESSING</div>
+    </div>
+    <a class="btn mt-10" href="https://www.facebook.com/ThroneofJackpots" target="_blank" rel="noopener">REQUEST CASHOUT</a>
+  </div>
+</section>
+
+<section id="support" class="px-4 py-20 relative overflow-hidden" style="background:radial-gradient(70% 90% at 50% 100%,rgba(140,70,230,.4),transparent 70%)">
+  <div class="max-w-2xl mx-auto text-center">
+    <h2 class="gold-text font-bold text-2xl sm:text-4xl">NEED HELP? OUR AGENTS ARE ACTIVE 24 HOURS.</h2>
+    <p class="mt-5" style="color:var(--muted)">Have a question, need assistance, or want to get started? Our active agents are available 24 hours to help.</p>
+    <a class="btn mt-8" href="https://www.facebook.com/ThroneofJackpots" target="_blank" rel="noopener">MESSAGE AN AGENT</a>
+  </div>
+</section>
+
+<section class="px-4 py-20">
+  <div class="max-w-5xl mx-auto">
+    <h2 class="gold-text text-center font-bold text-2xl sm:text-4xl">HOW TO GET STARTED</h2>
+    <ol class="mt-12 grid gap-5 md:grid-cols-3 list-none p-0">
+      <li class="frame p-6"><div class="brand gold-text text-4xl font-black">01</div><h3 class="mt-2 font-bold text-lg">CONTACT US</h3><p class="mt-2 text-sm" style="color:var(--muted)">Message Throne of Jackpots through Facebook.</p></li>
+      <li class="frame p-6"><div class="brand gold-text text-4xl font-black">02</div><h3 class="mt-2 font-bold text-lg">CHOOSE YOUR GAME</h3><p class="mt-2 text-sm" style="color:var(--muted)">Select your preferred gaming platform.</p></li>
+      <li class="frame p-6"><div class="brand gold-text text-4xl font-black">03</div><h3 class="mt-2 font-bold text-lg">GET SUPPORT</h3><p class="mt-2 text-sm" style="color:var(--muted)">Our active agents help you with the next steps.</p></li>
+    </ol>
+  </div>
+</section>
+
+<section id="contact" class="px-4 py-24 text-center">
+  <div class="max-w-2xl mx-auto">
+    <h2 class="gold-text font-black text-3xl sm:text-5xl">YOUR THRONE AWAITS 👑</h2>
+    <p class="mt-5 text-lg" style="color:var(--muted)">Ready to get started? Contact Throne of Jackpots today.</p>
+    <a class="btn mt-9" href="https://www.facebook.com/ThroneofJackpots" target="_blank" rel="noopener">VISIT OUR FACEBOOK</a>
+  </div>
+</section>
+</main>
+
+<footer class="px-4 py-12" style="border-top:1px solid rgba(227,181,79,.5);background:rgba(10,4,20,.85)">
+  <div class="max-w-6xl mx-auto grid gap-8 md:grid-cols-3">
+    <div><div class="brand gold-text font-black text-lg">THRONE OF JACKPOTS 👑</div><p class="mt-2 text-sm" style="color:var(--muted)">Premium gaming access with active agent support.</p></div>
+    <div><div class="font-bold" style="color:var(--gold2)">Quick Links</div><ul class="mt-2 space-y-1 text-sm list-none p-0" style="color:var(--lav)"><li><a href="#home">Home</a></li><li><a href="#games">Games</a></li><li><a href="#support">Support</a></li><li><a href="#contact">Contact</a></li></ul></div>
+    <div><div class="font-bold" style="color:var(--gold2)">Social</div><a class="text-sm" style="color:var(--lav)" href="https://www.facebook.com/ThroneofJackpots" target="_blank" rel="noopener">Facebook</a></div>
+  </div>
+  <p class="mt-10 text-center text-xs" style="color:var(--muted)">18+ | Play Responsibly. Terms &amp; Conditions Apply.</p>
+</footer>
+
+<script>
+const games=[["🐉","Orion Stars"],["⚔️","Juwa"],["🏰","Game Vault"],["🔥","Vegas Sweeps"],["🦅","Fire Kirin"],["🐼","Panda Master"],["🌌","Milky Way"],["🛡️","Dragon Fury"],["👑","Ultra Thunder"],["⚡","E-Game"],["🐲","Orion Strike"],["⚔️","Juwa 2.0"],["🏆","Mr. All in One"],["✨","Noble"],["💰","Cash Machine"]];
+document.getElementById('grid').innerHTML=games.map(g=>`<div class="frame game p-5"><div class="text-4xl">${g[0]}</div><div class="mt-3 font-bold" style="color:var(--gold2)">${g[1]}</div></div>`).join('');
+(function(){
+  if(matchMedia('(prefers-reduced-motion: reduce)').matches)return;
+  const c=document.getElementById('fx'),x=c.getContext('2d');let w,h,p=[];
+  function size(){w=c.width=innerWidth;h=c.height=innerHeight}
+  size();addEventListener('resize',size);
+  for(let i=0;i<38;i++)p.push({x:Math.random(),y:Math.random(),r:Math.random()*1.8+.6,s:Math.random()*.0004+.0001,a:Math.random()*6});
+  (function draw(){
+    x.clearRect(0,0,w,h);
+    for(const q of p){q.y-=q.s;q.a+=.012;if(q.y<0){q.y=1;q.x=Math.random()}
+      x.beginPath();x.arc(q.x*w,q.y*h,q.r,0,7);
+      x.fillStyle=`rgba(201,179,255,${.25+.25*Math.sin(q.a)})`;x.shadowColor='#a070ff';x.shadowBlur=10;x.fill()}
+    requestAnimationFrame(draw)})();
+})();
+</script>
+</body>
+</html>
